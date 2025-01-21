@@ -1,0 +1,308 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.glow-text {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ff6f61;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6f61;
+  padding: 15px;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  background: url('assets/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero .btn-primary {
+  background: #ff6f61;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Services Section */
+.services {
+  padding: 50px 0;
+}
+
+.services .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.services .card {
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+}
+
+.services .card img {
+  width: 100%;
+  height: auto;
+}
+
+.services .card-title {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* Menu Section */
+.menu {
+  padding: 50px 0;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact input, 
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #ff6f61;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-nav {
+      flex-direction: column;
+  }
+
+  .navbar-nav .nav-item {
+      margin: 10px 0;
+  }
+
+  .hero {
+      padding: 50px 20px;
+  }
+
+  .services .row, .menu .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card, .menu-item {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 24px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  .hero {
+      padding: 30px 10px;
+  }
+
+  .hero .btn-primary {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+/* General styles for body */
+
+
+/* Fluid container */
+.container-fluid {
+  padding: 20px;
+  max-width: 1200px; /* Limit maximum width for large screens */
+  margin: 0 auto;
+}
+
+/* Section styling */
+.section-1 {
+  text-align: center; /* Center-align content */
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-top: 20px;
+}
+
+/* Paragraph styling */
+.container-4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Textarea styling */
+.input-1 {
+  width: 100%; /* Responsive width */
+  max-width: 600px; /* Maximum width for large screens */
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing only */
+  font-size: 1rem;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.input-1:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+
+/* Button styling */
+.review-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.review-btn:active {
+  background-color: #003f7f; /* Even darker blue on click */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container-4 {
+      font-size: 1rem;
+  }
+
+  .input-1 {
+      font-size: 0.9rem;
+  }
+
+  .review-btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+      padding: 15px;
+  }
+
+  .input-1 {
+      height: 80px; /* Smaller textarea height */
+  }
+
+  .review-btn {
+      width: 100%; /* Full-width button for smaller screens */
+      padding: 10px;
+  }
+}

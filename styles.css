@@ -1,0 +1,309 @@
+/* Reset margins, padding, and set box-sizing for the whole page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Take up the full height of the viewport */
+  position: relative; /* Allow absolute positioning of child elements */
+  background: #282c34;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Base Styles */
+
+
+/*----------------------------------------------------floating animation---------------------------------------------------------------------------------*/
+
+
+/* */
+
+
+/* Container for the floating circles and overall page styling */
+/* Ensure body takes up full height and enables absolute positioning */
+/* Floating Stars Container */
+/* Container for the stars */
+/* Basic Styles for the Stars */
+#stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep the stars behind the content */
+}
+
+.floating-star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatAnimation 8s ease-in-out infinite;
+}
+
+/* Keyframes for Floating Animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-100vh) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+
+
+
+
+/*------------------------------------------------------floating animation-------------------------------------------------------------------------------*/
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('hero-image.jpg'); /* Replace with your own image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero-content {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.glow-text {
+  font-family: 'Righteous', cursive;
+  font-size: 3rem; /* Adjust for smaller screens */
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.animated-text {
+  font-size: 1.2rem; /* Adjust for mobile */
+  margin-top: 20px;
+  animation: fadeIn 3s ease-out;
+}
+
+.animated-btn {
+  margin-top: 30px;
+  font-size: 1rem; /* Adjust for mobile */
+  padding: 12px 40px;
+  background: #ff6347;
+  color: white;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(255, 99, 71, 0.5);
+}
+
+/* Service Cards */
+.services {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px; /* Adjust padding for mobile */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center content in cards */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  font-size: 1.5rem; /* Adjust for mobile */
+  color: #333;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+  color: #ff6347;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347, 0 0 20px #ff6347;
+  }
+  100% {
+      text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 576px) {
+  .hero-content {
+      padding: 0 15px;
+  }
+  .glow-text {
+      font-size: 3.5rem; /* Adjust for larger screens */
+  }
+  .animated-btn {
+      font-size: 1.1rem;
+      padding: 12px 45px;
+  }
+  .service-card {
+      padding: 30px; /* Increase padding for larger screens */
+  }
+  .service-title {
+      font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+      padding: 0 20px;
+  }
+  .glow-text {
+      font-size: 4rem; /* Adjust for tablets and larger screens */
+  }
+  .animated-btn {
+      font-size: 1.2rem;
+      padding: 15px 50px;
+  }
+  .service-card {
+      padding: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-card {
+      padding: 50px; /* Adjust padding for large screens */
+  }
+}
+
+/* location fecting styling
+
+
+/* Overlay background with blur effect */
+.location-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Blur the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeIn 1s forwards;
+}
+
+/* Location request container styling */
+.location-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  margin: 20px auto;
+  animation: popIn 0.5s ease-out forwards;
+}
+
+.location-container p {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.location-container button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.location-container button:hover {
+  background-color: #e65c50;
+}
+
+/* Status message styling */
+.location-container #status {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Keyframes for fading in overlay and popping in container */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* above is location fecting styling
